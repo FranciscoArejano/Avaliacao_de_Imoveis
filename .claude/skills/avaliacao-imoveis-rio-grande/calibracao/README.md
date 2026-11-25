@@ -64,6 +64,10 @@ Sensibilidade Cidade Nova (v2 ajustada, gourmet 12 m²) — as duas entradas mai
 
 Erro médio −5%, todos dentro do campo de arbítrio (±15%). O comparativo das casas ainda fica 14–16% abaixo: próximas vendas de casas devem dizer se é a amostra (anúncios de casas antigas/sem lazer) ou o método.
 
+### v2.2 — salvaguardas (terreno 0,5–2x, resíduo negativo → preço total, evolutivo > 1,5x comparativo descartado)
+Motivadas por uma avaliação na Vila Junção (casa de 172,8 m² em bairro de preços baixos: evolutivo R$ 810 mil x mercado ~R$ 300 mil).
+Recalibração: Cassino −6% (igual), Padre Feijó −3% (antes −7%, terreno agora só com lotes de 84–175 m²), apartamentos −4% (igual).
+
 ## Lições
 1. Casa pequena em lote grande (Cassino) e lazer (piscina, gourmet) exigem separar terreno e lazer — R$/m² construído sozinho subavalia muito.
 2. O evolutivo superestimou nos dois casos (custo de reposição > preço de mercado) → fator de comercialização < 1 em Rio Grande, sobretudo com superadequação (acabamento acima do padrão do bairro).

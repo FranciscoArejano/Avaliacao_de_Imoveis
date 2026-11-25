@@ -49,7 +49,7 @@ Considerar e mencionar quando relevante (confirmar com o usuário ou com pesquis
 ## 4. Cálculo — usar `scripts/avaliar.py` (nunca de cabeça)
 Montar um JSON no formato de `calibracao/*.json` e rodar `python3 scripts/avaliar.py caso.json`. O script faz:
 
-**A. Terreno (comparativo de terrenos):** R$/m² × fator oferta × tempo × fator área ((Acomp/Asub)^0,25 fora de ±30%), saneamento ±30%.
+**A. Terreno (comparativo de terrenos):** R$/m² × fator oferta × tempo × fator área ((Acomp/Asub)^0,25 fora de ±30%), saneamento ±30%. Só lotes com área entre 0,5× e 2× a do avaliando (lotes grandes/comerciais distorcem); amostra dispersa → mediana, com aviso.
 
 **B. Comparativo direto (NBR 14653-2), com terreno e lazer separados:**
 1. Preço do comparável × fator oferta × fator tempo
@@ -63,6 +63,10 @@ Montar um JSON no formato de `calibracao/*.json` e rodar `python3 scripts/avalia
 - Área equivalente = construída + 0,6 × cobertas abertas (gourmet/varanda) + 0,3 × descobertas trabalhadas.
 
 Sem terrenos (apartamentos) só roda o comparativo. Com menos de 2 comparáveis após saneamento o script não dá valor — buscar mais dados em vez de forçar.
+
+**Salvaguardas (caso Vila Junção, nov/2026):**
+- Se o terreno estimado deixar resíduo negativo em algum comparável (preço − terreno < 0), a separação de terreno é inválida → o script usa o **comparativo pelo preço total** (terreno embutido no R$/m², válido quando os lotes dos comparáveis são parecidos).
+- Se o evolutivo passar de **1,5× o comparativo**, é superadequação/bairro abaixo do custo de reprodução → evolutivo descartado, valor pelo comparativo.
 
 **D. Conciliação:** média simples dos dois métodos. Confiança: ALTA se divergência ≤ 15% e n ≥ 5; MÉDIA ≤ 25%; BAIXA acima — nesse caso reportar a faixa entre os métodos como resultado principal e pedir mais dados (área real, comparáveis melhores).
 

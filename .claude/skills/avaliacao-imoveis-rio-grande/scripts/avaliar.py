@@ -84,17 +84,29 @@ def sanear(vals, lim):
 # ---------------- Terreno (comparativo de terrenos) ----------------
 def valor_terreno(S, terrenos, P, log):
     ref = S["data_ref"]; a = S["terreno_m2"]
+    perto = [t for t in terrenos if 0.5 <= t["area"] / a <= 2.0]
+    if len(perto) >= 2:
+        fora = [t["id"] for t in terrenos if t not in perto]
+        if fora:
+            log.append(f"Terreno: fora da faixa 0,5–2x a área do avaliando (descartados): {fora}")
+        terrenos = perto
+    else:
+        log.append("Terreno: menos de 2 lotes com área entre 0,5x e 2x — usando todos (baixa confiança)")
     vals = []
     for t in terrenos:
         u = t["preco"] / t["area"] * P["fator_oferta"] * f_tempo(t.get("data", ref), ref, P) * f_area(t["area"], a)
         vals.append((t["id"], u))
     keep, out, m = sanear(vals, P["saneamento"])
+    if not keep:
+        log.append("Terreno: amostra muito dispersa (todos fora de ±30%) — usando a mediana, baixa confiança")
+        keep, out = [("mediana", st.median(v for _, v in vals))], []
     vu = st.mean(v for _, v in keep)
     log.append(f"Terreno: {len(terrenos)} dados, excluídos {out}; R$ {vu:,.0f}/m² x {a} m² = R$ {vu*a:,.0f}")
     return vu, vu * a
 
 # ---------------- Método comparativo direto (com terreno e lazer em R$) ----------------
 def comparativo(S, comps, vu_terreno, P, log):
+    """vu_terreno=0 -> comparativo pelo preço total (terreno embutido no R$/m² construído)."""
     ref = S["data_ref"]
     cub_n_ref = cub(ref, "normal")[0]
     a_sub = S["area_construida"]
@@ -114,6 +126,9 @@ def comparativo(S, comps, vu_terreno, P, log):
         rows.append((c["id"], h))
         log.append(f"  {c['id']:<28} R$ {c['preco']:>9,.0f} {c['area']:>4} m² | -lazer {amen_c:>7,.0f} -terreno {terr_c:>8,.0f} "
                    f"| área {fa:.2f} padrão {fp:.2f} conserv {fcv:.2f} => R$ {h:,.0f}/m² constr.")
+    if vu_terreno and any(h <= 0 for _, h in rows):
+        log.append("Comparativo: terreno estimado >= preço de comparáveis (resíduo negativo) -> separação de terreno inválida")
+        return None, None, 0
     keep, out, m = sanear(rows, P["saneamento"])
     if len(keep) < 2:
         log.append(f"Comparativo: amostra insuficiente após saneamento (n={len(keep)})"); return None, None, 0
@@ -152,7 +167,14 @@ def main():
     vu_t, terreno = valor_terreno(S, caso["terrenos"], P, log) if caso.get("terrenos") else (0, 0)
     log.append("Comparativo direto (preço - lazer - terreno, homogeneizado por m² construído):")
     vc, cv, n = comparativo(S, caso["comparaveis"], vu_t, P, log) if caso.get("comparaveis") else (None, None, 0)
+    if not vc and vu_t and caso.get("comparaveis"):
+        log.append("Comparativo pelo preço total (terreno embutido; comparáveis com lotes semelhantes):")
+        vc, cv, n = comparativo(S, caso["comparaveis"], 0, P, log)
     ve, share_t = evolutivo(S, terreno, P, log) if terreno else (None, 0)
+    if vc and ve and ve > 1.5 * vc:
+        log.append(f"SUPERADEQUAÇÃO: evolutivo (R$ {ve:,.0f}) > 1,5x comparativo (R$ {vc:,.0f}) — o mercado do bairro "
+                   "não paga o custo de reprodução; evolutivo descartado, valor pelo comparativo")
+        ve = None
     # Conciliação
     if vc and ve:
         # Peso igual. Calibração (2 vendas reais) mostrou que o evolutivo superestima
@@ -166,6 +188,9 @@ def main():
         log.append(f"  faixa entre métodos: R$ {round(min(vc,ve),-3):,.0f} – {round(max(vc,ve),-3):,.0f}")
     else:
         final = vc or ve
+        if vc and not ve and n:
+            conf = "MÉDIA" if (cv or 1) <= 0.15 and n >= 5 else "BAIXA"
+            log.append(f"Só comparativo: n={n}, CV {cv:.0%}; confiança {conf}")
     if not final:
         log.append("SEM RESULTADO: amostra insuficiente (mín. 2 comparáveis após saneamento, ou terrenos para o evolutivo). Buscar mais dados.")
         print(f"=== {S.get('nome','imóvel')} | data ref. {S['data_ref']} ===")
