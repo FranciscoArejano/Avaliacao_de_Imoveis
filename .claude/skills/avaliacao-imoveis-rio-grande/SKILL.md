@@ -39,6 +39,7 @@ Fontes: sites de imobiliárias locais (Marcos Otero, Reis, Latitude32, Lindalvo,
 
 ## 3. Particularidades de Rio Grande
 Considerar e mencionar quando relevante (confirmar com o usuário ou com pesquisa, não presumir):
+- **Bairro oficial ≠ localização real**: em Rio Grande o bairro do CEP/Google/matrícula costuma estar errado ou ser genérico (ex.: R. Veiga Cabral aparece como Vila Junção/Pq. Coelho, mas fica junto ao Miguel de Castro Moreira/São Paulo, perto do Centro). Sempre confirmar com o usuário onde o imóvel fica de fato e escolher os comparáveis pela proximidade real, não pelo rótulo do portal. Anúncios também trazem bairro trocado.
 - Diferença de mercado entre Centro, Cassino (praia, sazonalidade, segunda residência, temporada) e demais bairros.
 - No Cassino o **terreno pesa muito** (lote 10x30 ≈ R$ 110–250 mil anunciado em 2026); casa pequena em lote grande não pode ser avaliada só por R$/m² construído.
 - Terrenos de marinha (aforamento SPU): laudêmio de 5% na transferência, foro anual.
