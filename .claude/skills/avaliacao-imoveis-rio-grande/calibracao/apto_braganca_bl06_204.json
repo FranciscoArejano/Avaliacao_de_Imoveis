@@ -1,0 +1,42 @@
+{
+  "imovel": {
+    "nome": "Apto 204 Bl 06 + box - Cond. Bragança, Estr. Roberto Socoowski 881, Carreiros - matr. 71.435/72.790",
+    "data_ref": "2024-09",
+    "area_construida": 47.71,
+    "padrao": "normal",
+    "idade": 8,
+    "estado": "bom",
+    "moveis_valor": 8000,
+    "_obs": "móveis sob medida + roupeiro e cômoda incluídos (valor estimado); box coberto; alienação fiduciária quitada na venda"
+  },
+  "comparaveis": [
+    {
+      "id": "G3 AP0190 47m2 semi-mob",
+      "fonte": "https://www.g3.imb.br/imovel/apartamento/venda/rio-grande/rs/vila-sao-miguel/AP0190_GAIMB (preço do trecho de busca; anúncio indisponível)",
+      "data": "2026-11",
+      "preco": 150000,
+      "area": 47
+    },
+    {
+      "id": "G3 AP0027 47m2 sem vaga",
+      "fonte": "https://www.g3.imb.br/imovel/apartamento/venda/rio-grande/rs/vila-sao-miguel/AP0027_GAIMB (preço do trecho de busca; indisponível)",
+      "data": "2026-11",
+      "preco": 145000,
+      "area": 47.03
+    },
+    {
+      "id": "G3 AP0025 49m2 7o andar",
+      "fonte": "https://www.g3.imb.br/imovel/apartamento/venda/rio-grande/rs/vila-sao-joao/AP0025_GAIMB (descrição 180 mil; widget 265 mil)",
+      "data": "2026-11",
+      "preco": 180000,
+      "area": 49
+    },
+    {
+      "id": "Reis 4322919 50m2 (end. não confirmado)",
+      "fonte": "https://www.reisnegociosimobiliarios.com.br/imovel/4322919/apartamento-venda-rio-grande-rs-vila-sao-joao",
+      "data": "2026-11",
+      "preco": 170000,
+      "area": 50
+    }
+  ]
+}

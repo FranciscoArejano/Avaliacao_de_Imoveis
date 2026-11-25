@@ -1,0 +1,23 @@
+{
+  "imovel": {
+    "nome": "Casa 2 - Conjunto R. Jóquei Club 102 - matr. 26.802",
+    "data_ref": "2020-12",
+    "area_construida": 86,
+    "padrao": "normal",
+    "idade": 36,
+    "estado": "regular",
+    "moveis_valor": 0,
+    "_obs": "área privativa 86 m² + 29,5 m² descoberta; fração 145 m²; avaliação do banco R$ 192.000"
+  },
+  "comparaveis": [
+    {
+      "id": "Otavio Vaz 976CV Santorini 55m2",
+      "fonte": "https://www.otaviovaz.com.br/imovel/venda-casa-em-condominio-2-dormitorios-1-garagem-vila-sao-joao-rio-grande-rs/976cv/",
+      "data": "2026-11",
+      "preco": 185000,
+      "area": 55,
+      "idade": 10,
+      "estado": "bom"
+    }
+  ]
+}

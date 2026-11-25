@@ -33,6 +33,8 @@ Três amostras separadas:
 
 Fontes: sites de imobiliárias locais (Marcos Otero, Reis, Latitude32, Lindalvo, G3, Maurício Saraiva etc.) costumam abrir; ZAP, VivaReal, Imovelweb, Wimóveis, Casa Mineira e Attria **bloqueiam acesso automatizado (403)** — não tentar contornar o bloqueio; usar trechos da busca web (marcando como "fonte secundária") ou pedir ao usuário que cole os anúncios/planilha.
 - Não inventar comparáveis nem preços. Se houver poucos dados, dizer isso e ampliar a área de busca (bairros vizinhos, Pelotas como referência secundária, sinalizando).
+- **Excluir leilões, licitações da Caixa e vendas com dívidas** — não são preço de mercado (no Bragança ficaram ~40% abaixo).
+- **Apartamentos**: priorizar unidades do mesmo condomínio/bloco; é o cenário mais confiável (sem evolutivo; só comparativo).
 - **Excluir da amostra o próprio imóvel** (anúncios antigos dele) — mas registrar o preço pedido: serve para calibrar o fator oferta.
 
 ## 3. Particularidades de Rio Grande
@@ -59,6 +61,8 @@ Montar um JSON no formato de `calibracao/*.json` e rodar `python3 scripts/avalia
 
 **C. Evolutivo (NBR 14653-2):** terreno + (área equivalente × CUB do padrão × BDI 1,20 × fator Ross-Heidecke) + piscina (reposição depreciada) + móveis, × fator de comercialização.
 - Área equivalente = construída + 0,6 × cobertas abertas (gourmet/varanda) + 0,3 × descobertas trabalhadas.
+
+Sem terrenos (apartamentos) só roda o comparativo. Com menos de 2 comparáveis após saneamento o script não dá valor — buscar mais dados em vez de forçar.
 
 **D. Conciliação:** média simples dos dois métodos. Confiança: ALTA se divergência ≤ 15% e n ≥ 5; MÉDIA ≤ 25%; BAIXA acima — nesse caso reportar a faixa entre os métodos como resultado principal e pedir mais dados (área real, comparáveis melhores).
 

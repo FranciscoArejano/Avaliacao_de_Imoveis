@@ -116,7 +116,7 @@ def comparativo(S, comps, vu_terreno, P, log):
                    f"| área {fa:.2f} padrão {fp:.2f} conserv {fcv:.2f} => R$ {h:,.0f}/m² constr.")
     keep, out, m = sanear(rows, P["saneamento"])
     if len(keep) < 2:
-        log.append("Comparativo: amostra insuficiente após saneamento"); return None, None, 0
+        log.append(f"Comparativo: amostra insuficiente após saneamento (n={len(keep)})"); return None, None, 0
     mu = st.mean(v for _, v in keep); cv = st.stdev(v for _, v in keep) / mu
     amen_s = amenidades(S, ref, P, cub_n_ref)
     terr_s = S["terreno_m2"] * vu_terreno if vu_terreno else 0
@@ -166,10 +166,14 @@ def main():
         log.append(f"  faixa entre métodos: R$ {round(min(vc,ve),-3):,.0f} – {round(max(vc,ve),-3):,.0f}")
     else:
         final = vc or ve
+    if not final:
+        log.append("SEM RESULTADO: amostra insuficiente (mín. 2 comparáveis após saneamento, ou terrenos para o evolutivo). Buscar mais dados.")
+        print(f"=== {S.get('nome','imóvel')} | data ref. {S['data_ref']} ===")
+        print("\n".join(log)); return None
     log.append(f"VALOR PROVÁVEL: R$ {round(final, -3):,.0f}  | campo de arbítrio R$ {round(final*0.85,-3):,.0f} – {round(final*1.15,-3):,.0f}")
     if vendido:
-        log.append(f"Vendido R$ {vendido:,.0f}: erro {(final-vendido)/vendido:+.1%} "
-                   f"(comparativo {((vc or 0)-vendido)/vendido:+.1%}, evolutivo {((ve or 0)-vendido)/vendido:+.1%})")
+        partes = [f"{n} {(v-vendido)/vendido:+.1%}" for n, v in (("comparativo", vc), ("evolutivo", ve)) if v]
+        log.append(f"Vendido R$ {vendido:,.0f}: erro {(final-vendido)/vendido:+.1%} ({', '.join(partes)})")
     print(f"=== {S.get('nome','imóvel')} | data ref. {S['data_ref']} ===")
     print("\n".join(log))
     return final

@@ -4,29 +4,112 @@
     "data_ref": "2026-04",
     "area_construida": 70,
     "_obs_area": "60 m² averbados (Av.6) + lavanderia e banheiro em obra (estimado)",
-    "area_coberta_aberta": 25,
-    "_obs_gourmet": "área gourmet coberta - metragem ESTIMADA, confirmar",
+    "area_coberta_aberta": 18,
+    "_obs_gourmet": "área gourmet informada pelo usuário (3x6 m)",
     "terreno_m2": 300,
     "padrao": "normal",
     "idade": 13,
     "estado": "bom",
-    "piscina": {"tamanho": "media", "envidracada": true},
+    "piscina": {
+      "tamanho": "media",
+      "envidracada": true
+    },
     "moveis_valor": 15000,
     "_obs": "terreno de marinha (aforamento, laudêmio 5% pago pelo comprador); mobiliada exceto geladeira"
   },
   "comparaveis": [
-    {"id": "MO-19654 2q", "fonte": "https://marcosotero.com.br/imovel/19654/casa-2-quartos-cassino-rio-grande/", "data": "2026-11", "preco": 297000, "area": 70},
-    {"id": "MO-10441 2q pisc+gourm", "fonte": "https://marcosotero.com.br/imovel/10441/casa-2-quartos-cassino-rio-grande/", "data": "2026-11", "preco": 430000, "area": 100, "terreno_m2": 200, "piscina": {"tamanho": "media"}, "area_coberta_aberta": 15, "estado": "bom"},
-    {"id": "MO-19844 3q", "fonte": "https://marcosotero.com.br/imovel/19844/casa-3-quartos-cassino-rio-grande/", "data": "2026-11", "preco": 340000, "area": 103},
-    {"id": "MO-19861 3q alto/novo", "fonte": "https://marcosotero.com.br/imovel/19861/casa-3-quartos-cassino-rio-grande/", "data": "2026-11", "preco": 590000, "area": 93, "terreno_m2": 210, "padrao": "alto", "idade": 0, "estado": "novo"},
-    {"id": "MO-20039 3q 1s", "fonte": "https://marcosotero.com.br/imovel/20039/casa-3-quartos-cassino-rio-grande/", "data": "2026-11", "preco": 550000, "area": 150},
-    {"id": "MO-19702 2q", "fonte": "https://marcosotero.com.br/imovel/19702/casa-2-quartos-cassino-rio-grande/", "data": "2026-11", "preco": 330000, "area": 100},
-    {"id": "MO-19834 2q+edicula", "fonte": "https://marcosotero.com.br/imovel/19834/casa-2-quartos-cassino-rio-grande/", "data": "2026-11", "preco": 550000, "area": 200, "terreno_m2": 360, "gourmet": true, "estado": "otimo", "idade": 10}
+    {
+      "id": "MO-19654 2q",
+      "fonte": "https://marcosotero.com.br/imovel/19654/casa-2-quartos-cassino-rio-grande/",
+      "data": "2026-11",
+      "preco": 297000,
+      "area": 70
+    },
+    {
+      "id": "MO-10441 2q pisc+gourm",
+      "fonte": "https://marcosotero.com.br/imovel/10441/casa-2-quartos-cassino-rio-grande/",
+      "data": "2026-11",
+      "preco": 430000,
+      "area": 100,
+      "terreno_m2": 200,
+      "piscina": {
+        "tamanho": "media"
+      },
+      "area_coberta_aberta": 15,
+      "estado": "bom"
+    },
+    {
+      "id": "MO-19844 3q",
+      "fonte": "https://marcosotero.com.br/imovel/19844/casa-3-quartos-cassino-rio-grande/",
+      "data": "2026-11",
+      "preco": 340000,
+      "area": 103
+    },
+    {
+      "id": "MO-19861 3q alto/novo",
+      "fonte": "https://marcosotero.com.br/imovel/19861/casa-3-quartos-cassino-rio-grande/",
+      "data": "2026-11",
+      "preco": 590000,
+      "area": 93,
+      "terreno_m2": 210,
+      "padrao": "alto",
+      "idade": 0,
+      "estado": "novo"
+    },
+    {
+      "id": "MO-20039 3q 1s",
+      "fonte": "https://marcosotero.com.br/imovel/20039/casa-3-quartos-cassino-rio-grande/",
+      "data": "2026-11",
+      "preco": 550000,
+      "area": 150
+    },
+    {
+      "id": "MO-19702 2q",
+      "fonte": "https://marcosotero.com.br/imovel/19702/casa-2-quartos-cassino-rio-grande/",
+      "data": "2026-11",
+      "preco": 330000,
+      "area": 100
+    },
+    {
+      "id": "MO-19834 2q+edicula",
+      "fonte": "https://marcosotero.com.br/imovel/19834/casa-2-quartos-cassino-rio-grande/",
+      "data": "2026-11",
+      "preco": 550000,
+      "area": 200,
+      "terreno_m2": 360,
+      "gourmet": true,
+      "estado": "otimo",
+      "idade": 10
+    }
   ],
   "terrenos": [
-    {"id": "Terreno 10x30 entrada balneario", "fonte": "busca web (Marcos Otero)", "data": "2026-11", "preco": 110000, "area": 300},
-    {"id": "Terreno 10x30 R. Dr Jose Salomao", "fonte": "busca web", "data": "2026-11", "preco": 165000, "area": 300},
-    {"id": "Terreno 10x30 ABC-IX", "fonte": "busca web", "data": "2026-11", "preco": 200000, "area": 300},
-    {"id": "Terreno 10x30 ABC", "fonte": "busca web", "data": "2026-11", "preco": 250000, "area": 300}
+    {
+      "id": "Terreno 10x30 entrada balneario",
+      "fonte": "busca web (Marcos Otero)",
+      "data": "2026-11",
+      "preco": 110000,
+      "area": 300
+    },
+    {
+      "id": "Terreno 10x30 R. Dr Jose Salomao",
+      "fonte": "busca web",
+      "data": "2026-11",
+      "preco": 165000,
+      "area": 300
+    },
+    {
+      "id": "Terreno 10x30 ABC-IX",
+      "fonte": "busca web",
+      "data": "2026-11",
+      "preco": 200000,
+      "area": 300
+    },
+    {
+      "id": "Terreno 10x30 ABC",
+      "fonte": "busca web",
+      "data": "2026-11",
+      "preco": 250000,
+      "area": 300
+    }
   ]
 }

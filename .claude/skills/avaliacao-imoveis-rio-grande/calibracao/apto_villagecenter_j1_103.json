@@ -1,0 +1,36 @@
+{
+  "imovel": {
+    "nome": "Apto 103 Bl J1 - Res. Village Center, Av. Pres. Vargas 285, Pq. Cidade Nova - matr. 63.927",
+    "data_ref": "2022-02",
+    "area_construida": 54.08,
+    "padrao": "normal",
+    "idade": 10,
+    "estado": "bom",
+    "moveis_valor": 0,
+    "_obs": "vendido locado, financiamento Banrisul 128 mil"
+  },
+  "comparaveis": [
+    {
+      "id": "MO-8757 56m2 reformado",
+      "fonte": "https://marcosotero.com.br/imovel/8757/apartamento-2-quartos-residencial-village-center-sao-paulo-rio-grande/",
+      "data": "2026-11",
+      "preco": 208000,
+      "area": 56,
+      "estado": "otimo"
+    },
+    {
+      "id": "G3 AP0155 térreo mobiliado",
+      "fonte": "https://www.g3.imb.br/imovel/apartamento/venda/rio-grande/rs/sao-paulo/AP0155_GAIMB (área não informada: 54 assumido)",
+      "data": "2026-11",
+      "preco": 180000,
+      "area": 54
+    },
+    {
+      "id": "G3 AP0026 50m2 mobiliado",
+      "fonte": "https://www.g3.imb.br/imovel/apartamento/venda/rio-grande/rs/sao-paulo/AP0026_GAIMB",
+      "data": "2026-11",
+      "preco": 180000,
+      "area": 50
+    }
+  ]
+}
