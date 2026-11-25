@@ -8,7 +8,6 @@ Rodar: `python3 ../scripts/avaliar.py <caso>.json --vendido <preço>`
 |---|---|---|---|
 | `cassino_gramado_2284.json` — R. Gramado 2284, Cassino (ABC-IX), matr. 61.459 | 09/04/2026 | R$ 465.000 à vista | 60 m² averbados + ampliação; lote 300 m² (marinha); piscina envidraçada, gourmet coberta; mobiliada |
 | `cidadenova_padrefeijo_608.json` — R. Padre Feijó 608, Cidade Nova, matr. 59.688 | 06/04/2025 | R$ 429.000 (150 mil + financ.) | Reformada, excelente acabamento; piscina aquecida; planejados e eletros incluídos. Anunciada por R$ 530.000 (Loft) → fator oferta real 0,81 |
-
 | `apto_braganca_bl06_204.json` — Apto 204 Bl 06 + box, Cond. Bragança (Carreiros), matr. 71.435/72.790 | 10/09/2024 | R$ 165.000 | 47,71 m² priv.; móveis sob medida incluídos |
 | `apto_villagecenter_j1_103.json` — Apto 103 Bl J1, Res. Village Center (Pq. Cidade Nova), matr. 63.927 | 24/02/2022 | R$ 160.000 | 54,08 m² priv.; vendido locado, financ. Banrisul |
 | `casa_joqueiclub_102_c2.json` — Casa 2, R. Jóquei Club 102, matr. 26.802 | ~12/2020 | R$ 150.000 | 86 m² priv. (1984); avaliação do banco R$ 192.000. **Sem resultado**: só 1 comparável |
