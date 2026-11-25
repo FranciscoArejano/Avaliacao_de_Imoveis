@@ -2,12 +2,12 @@
   "imovel": {
     "nome": "Casa - Rua Padre Feijó, 608, Cidade Nova - matr. 59.688",
     "data_ref": "2025-04",
-    "area_construida": 105,
-    "_obs_area": "105 m² conforme anúncio Loft do próprio imóvel; pode ser área do lote (4,20x25). CONFIRMAR",
+    "area_construida": 70,
+    "_obs_area": "~70 m² construídos, informado pelo usuário (o 105 m² do anúncio era a área do lote)",
     "area_coberta_aberta": 8,
     "_obs_gourmet": "área gourmet informada pelo usuário (2x4 m)",
     "terreno_m2": 120,
-    "padrao": "alto",
+    "padrao": "normal-alto",
     "idade": 5,
     "estado": "otimo",
     "piscina": {
@@ -15,7 +15,8 @@
       "aquecida": true
     },
     "moveis_valor": 25000,
-    "_obs": "reformada, aberturas alumínio; cozinha planejada c/ fornos, 2 ar-cond., portão elétrico, CFTV; regularização em andamento (proc. 11302/2023)"
+    "_obs": "reformada, aberturas alumínio; cozinha planejada c/ fornos, 2 ar-cond., portão elétrico, CFTV; regularização em andamento (proc. 11302/2023)",
+    "_obs_padrao": "casa pequena térrea com acabamento excelente -> normal-alto, conforme regra da SKILL.md (R1-A é casa grande de alto padrão)"
   },
   "comparaveis": [
     {

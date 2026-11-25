@@ -37,7 +37,10 @@ Premissas estimadas (a confirmar): área gourmet, área construída real, valor 
 | Apto Village Center (2022) | 160 mil | 145 mil | −10% | 3 comparáveis do mesmo condomínio, CV 3% |
 | Casa Jóquei Club (2020) | 150 mil | — | — | amostra insuficiente (1 comparável) |
 | Cassino (recalculado c/ gourmet 18 m²) | 465 mil | 426 mil | −8% | confiança MÉDIA |
-| Padre Feijó (recalculado c/ gourmet 8 m²) | 429 mil | 542 mil | +26% | confiança BAIXA; área construída incerta |
+| Padre Feijó (gourmet 8 m², área 105 m² do anúncio) | 429 mil | 542 mil | +26% | confiança BAIXA; 105 m² era a área do lote |
+| **Padre Feijó (área real ~70 m², padrão normal-alto)** | 429 mil | **389 mil** | **−9%** | confiança MÉDIA; comp. −19%, evol. +1%. Com padrão "alto": 422 mil (−2%) |
+
+**Resumo dos 4 casos com resultado (parâmetros atuais):** −8%, −9%, −9%, −10%. Viés sistemático para baixo, vindo do comparativo (−9% a −19%); o evolutivo ficou entre +1% e +3% nas casas. Hipótese: fator oferta 0,85 baixo demais — com 0,90 o erro dos apartamentos cai para −4%. Decidir com mais vendas.
 
 Sensibilidade ao fator oferta (só informativa, **não aplicada**): com 0,90 os apartamentos vão a −4% e o Cassino a −6%, mas a Padre Feijó piora para +30%. Os dois apartamentos sugerem que 0,85 está baixo para unidades padronizadas em condomínio, mas 2 casos não bastam para mudar.
 
@@ -54,7 +57,7 @@ Sensibilidade Cidade Nova (v2 ajustada, gourmet 12 m²) — as duas entradas mai
 1. Casa pequena em lote grande (Cassino) e lazer (piscina, gourmet) exigem separar terreno e lazer — R$/m² construído sozinho subavalia muito.
 2. O evolutivo superestimou nos dois casos (custo de reposição > preço de mercado) → fator de comercialização < 1 em Rio Grande, sobretudo com superadequação (acabamento acima do padrão do bairro).
 3. Padrão CUB deve seguir o tipo de projeto (R1-A é casa grande de alto padrão), não só a qualidade do acabamento.
-4. A área construída real é a entrada mais sensível — sempre confirmar (matrícula pode estar desatualizada; anúncio pode trazer área do lote).
+4. A área construída real é a entrada mais sensível (Padre Feijó: 105 m² do anúncio era o lote; com os ~70 m² reais o erro foi de +26% para −9%) — sempre confirmar (matrícula pode estar desatualizada; anúncio pode trazer área do lote).
 5. Apartamento com comparáveis do mesmo condomínio é o caso em que a skill funciona melhor (erro ~−9%, viés para baixo consistente).
 6. Excluir leilões e licitações da Caixa da amostra (preço 40% abaixo do mercado no Bragança).
 7. **Atenção:** FC 0,90 e a regra de conciliação foram ajustados depois de ver estas 2 vendas. Não é validação: testar em vendas novas antes de confiar nos parâmetros.
