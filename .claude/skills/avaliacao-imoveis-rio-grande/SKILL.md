@@ -1,6 +1,6 @@
 ---
 name: avaliacao-imoveis-rio-grande
-description: Avaliar valor de venda ou aluguel de imóveis no Brasil, especialmente em Rio Grande-RS, por método comparativo e evolutivo (NBR 14653) com laudo em português.
+description: Avaliar valor de venda ou aluguel de imóveis no Brasil, especialmente em Rio Grande-RS, por método comparativo e evolutivo (NBR 14653), entregando o laudo em Word e PDF no modelo da Arejano Corretora de Imóveis.
 ---
 
 # Avaliação de imóveis — Rio Grande/RS (Arejano Corretora de Imóveis)
@@ -94,11 +94,17 @@ Resultado: valor provável, campo de arbítrio (±15%), faixa entre métodos e g
 - Toda venda real da corretora com dados completos vira um caso em `calibracao/` (JSON + preço vendido). Rodar com `--vendido` e registrar o erro em `calibracao/README.md`.
 - Recalibrar fator oferta e fator de comercialização quando houver ≥ 5 vendas; validar em vendas que **não** foram usadas no ajuste.
 
-## 7. Entrega
-- Planilha (Sheets) com comparáveis, terrenos, fatores e cálculo dos dois métodos.
-- Parecer/laudo em documento (Docs), em português, com: identificação do imóvel, metodologia (comparativo + evolutivo), amostras com fontes, tratamento, resultado, grau de confiança, ressalvas, data.
-- Assinatura: "Arejano Corretora de Imóveis".
-- Ressalva obrigatória: trata-se de opinião de valor/parecer mercadológico baseado em ofertas públicas; laudo técnico formal (NBR 14653) exige profissional habilitado (CRECI com CNAI, engenheiro ou arquiteto) e vistoria.
+## 7. Entrega — laudo no modelo da Arejano (.docx + PDF)
+O laudo sai sempre em Word e PDF com a identidade da imobiliária (logo no cabeçalho, Times New Roman, títulos e tabelas no azul do logo, rodapé com endereço/telefones/e-mail e linha preta, A4 com as margens do modelo da corretora).
+
+1. Copiar `referencias/laudo_exemplo.json` para a pasta de trabalho e preencher (texto aceita `**negrito**`, `*itálico*`, `[link](url)`). Seções obrigatórias: 1 Identificação · 2 Objetivo e finalidade · 3 Caracterização · 4 Diagnóstico de mercado · 5 Metodologia · 6 Pesquisa de mercado (comparáveis e terrenos com links) · 7 Tratamento dos dados (fatores, saneamento, cálculo) · 8 Resultado · 9 Ressalvas e grau de confiança · 10 Encerramento.
+2. Gerar: `node scripts/gerar_laudo.js laudo.json Laudo_Avaliacao_<endereco>.docx`, depois `soffice --headless --convert-to pdf Laudo_Avaliacao_<endereco>.docx`.
+3. Conferir o PDF renderizado (`pdftoppm -jpeg -r 70 arquivo.pdf pg`) antes de entregar; enviar os dois arquivos ao usuário.
+- Assinatura padrão (em `scripts/gerar_laudo.js`, objeto `ID`): **Honorina Madureira Arejano – Corretora de Imóveis – CRECI 48.455 – Arejano Corretora de Imóveis**. Outra assinatura: campo `"assinatura": [linha1, linha2, ...]` no JSON.
+- Logo em `assets/logo_arejano.png`; endereço do rodapé e cores também no objeto `ID`.
+- Laudos de clientes não vão para o repositório (dados pessoais); só o modelo e os casos de calibração sem nomes.
+- Opcional: planilha com comparáveis, terrenos, fatores e cálculo, quando pedida.
+- Ressalva obrigatória (seção 9): trata-se de opinião de valor/parecer mercadológico baseado em ofertas públicas; laudo técnico formal (NBR 14653) exige profissional habilitado (CRECI com CNAI, engenheiro ou arquiteto) e vistoria.
 
 ## 8. Resposta no chat
 Resumo curto: valor provável, faixa, confiança, nº de comparáveis e terrenos, principais fatores que pesaram, premissas estimadas (a confirmar) e links para os arquivos.
