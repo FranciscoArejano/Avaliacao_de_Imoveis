@@ -1,0 +1,38 @@
+{
+  "imovel": {
+    "nome": "Casa - Rua Padre Feijó, 608, Cidade Nova - matr. 59.688",
+    "data_ref": "2025-04",
+    "area_construida": 105,
+    "_obs_area": "105 m² conforme anúncio Loft do próprio imóvel; pode ser área do lote (4,20x25). CONFIRMAR",
+    "area_coberta_aberta": 12,
+    "_obs_gourmet": "área gourmet aberta - metragem ESTIMADA",
+    "terreno_m2": 120,
+    "padrao": "alto",
+    "idade": 5,
+    "estado": "otimo",
+    "piscina": {"tamanho": "pequena", "aquecida": true},
+    "moveis_valor": 25000,
+    "_obs": "reformada, aberturas alumínio; cozinha planejada c/ fornos, 2 ar-cond., portão elétrico, CFTV; regularização em andamento (proc. 11302/2023)"
+  },
+  "comparaveis": [
+    {"id": "MO-6584 2q", "fonte": "https://marcosotero.com.br/imovel/6584/casa-2-quartos-cidade-nova-rio-grande/", "data": "2026-11", "preco": 370000, "area": 90},
+    {"id": "MO-19058 3q", "fonte": "https://marcosotero.com.br/imovel/19058/casa-3-quartos-cidade-nova-rio-grande/", "data": "2026-11", "preco": 299000, "area": 180},
+    {"id": "MO-18923 4q 1s", "fonte": "https://marcosotero.com.br/imovel/18923/casa-4-quartos-cidade-nova-rio-grande/", "data": "2026-11", "preco": 490000, "area": 300},
+    {"id": "MO-19285 3q", "fonte": "https://marcosotero.com.br/imovel/19285/casa-3-quartos-cidade-nova-rio-grande/", "data": "2026-11", "preco": 199000, "area": 270},
+    {"id": "MO-18652 sobrado+apto", "fonte": "https://marcosotero.com.br/imovel/18652/casa-3-quartos-cidade-nova-rio-grande/", "data": "2026-11", "preco": 550000, "area": 120},
+    {"id": "G3 R.Republica reforma", "fonte": "https://www.g3.imb.br/imovel/casa/venda/rio-grande/rs/cidade-nova/CA0013_GAIMB", "data": "2026-11", "preco": 245000, "area": 100, "estado": "reparos_simples"},
+    {"id": "MS 2q 80m2 (busca)", "fonte": "busca web - Mauricio Saraiva", "data": "2026-11", "preco": 490000, "area": 80},
+    {"id": "MS 2q 210m2 reforma (busca)", "fonte": "busca web - Mauricio Saraiva", "data": "2026-11", "preco": 440000, "area": 210, "estado": "reparos_simples"},
+    {"id": "IW 3q 170m2 (busca)", "fonte": "busca web - Imovelweb", "data": "2026-11", "preco": 350000, "area": 170},
+    {"id": "IW 3q 150m2 (busca)", "fonte": "busca web - Imovelweb", "data": "2026-11", "preco": 540000, "area": 150}
+  ],
+  "terrenos": [
+    {"id": "Terreno 280m2 (Latitude32)", "fonte": "https://www.latitude32imoveis.com.br/imoveis/a-venda/terreno/rio-grande/cidade-nova", "data": "2026-11", "preco": 200000, "area": 280},
+    {"id": "Terreno 175m2 (Latitude32)", "fonte": "idem", "data": "2026-11", "preco": 180000, "area": 175},
+    {"id": "Terreno 84m2 (Latitude32)", "fonte": "idem", "data": "2026-11", "preco": 120000, "area": 84},
+    {"id": "Terreno 504m2 (Lindalvo)", "fonte": "https://www.lindalvoimoveis.com.br/imoveis/a-venda/terreno+sobrado/rio-grande/cidade-nova", "data": "2026-11", "preco": 320000, "area": 504},
+    {"id": "Terreno 320m2 (Lindalvo)", "fonte": "idem", "data": "2026-11", "preco": 149000, "area": 320},
+    {"id": "Terreno 400m2 (Lindalvo)", "fonte": "idem", "data": "2026-11", "preco": 310000, "area": 400},
+    {"id": "Terreno 450m2 (Imovelweb)", "fonte": "busca web", "data": "2026-11", "preco": 810000, "area": 450}
+  ]
+}
