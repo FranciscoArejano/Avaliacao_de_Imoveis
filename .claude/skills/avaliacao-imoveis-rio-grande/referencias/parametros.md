@@ -30,7 +30,7 @@ Aquecimento +R$ 12.000 · Envidraçamento/cobertura +R$ 20.000
 Confirmar com orçamentos de piscineiros locais.
 
 ## Fatores homogeneização
-- Oferta: 0,85 (ver calibração)
+- Oferta: 0,90 (ver calibração)
 - Área: (Acomp/Asub)^0,125 dentro de ±30%; ^0,25 fora
 - Padrão: razão entre CUBs do padrão do avaliando e do comparável
 - Conservação: razão entre fatores Ross-Heidecke

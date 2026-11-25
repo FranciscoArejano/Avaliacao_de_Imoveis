@@ -53,6 +53,17 @@ Sensibilidade Cidade Nova (v2 ajustada, gourmet 12 m²) — as duas entradas mai
 | 70 m² | alto (R1-A) | 431 mil | +0,5% |
 | 70 m² | normal-alto | 398 mil | −7% |
 
+### v2.1 — fator oferta 0,90 (decidido após os 4 casos acima; ajuste dentro da amostra)
+
+| Caso | Vendido | Skill v2.1 | Erro |
+|---|---|---|---|
+| Cassino | 465 mil | 439 mil | −6% (comp. −14%, evol. +2%) |
+| Padre Feijó (~70 m², normal-alto) | 429 mil | 400 mil | −7% (comp. −16%, evol. +2%) |
+| Apto Bragança | 165 mil | 158 mil | −4% |
+| Apto Village Center | 160 mil | 153 mil | −4% |
+
+Erro médio −5%, todos dentro do campo de arbítrio (±15%). O comparativo das casas ainda fica 14–16% abaixo: próximas vendas de casas devem dizer se é a amostra (anúncios de casas antigas/sem lazer) ou o método.
+
 ## Lições
 1. Casa pequena em lote grande (Cassino) e lazer (piscina, gourmet) exigem separar terreno e lazer — R$/m² construído sozinho subavalia muito.
 2. O evolutivo superestimou nos dois casos (custo de reposição > preço de mercado) → fator de comercialização < 1 em Rio Grande, sobretudo com superadequação (acabamento acima do padrão do bairro).

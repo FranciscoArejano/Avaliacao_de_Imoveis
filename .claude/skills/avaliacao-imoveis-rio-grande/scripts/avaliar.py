@@ -26,7 +26,7 @@ PISCINA_BASE = {"pequena": 35000, "media": 55000, "grande": 80000}
 PISCINA_EXTRA = {"aquecida": 12000, "envidracada": 20000}
 
 DEFAULTS = {
-    "fator_oferta": 0.85,          # anúncio -> fechamento (calibrar com vendas da corretora)
+    "fator_oferta": 0.90,          # anúncio -> fechamento; 0,90 após 4 vendas reais (ver calibracao/)
     "valorizacao_anual": 0.05,     # ajuste temporal de anúncios/vendas antigas
     "bdi": 1.20,                   # itens fora do CUB: fundações, projetos, BDI, taxas
     "fator_comercializacao": 0.90, # evolutivo: provisório, calibrado em 2 vendas (ver calibracao/)

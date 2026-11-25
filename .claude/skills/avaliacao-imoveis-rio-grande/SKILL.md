@@ -69,7 +69,7 @@ Sem terrenos (apartamentos) só roda o comparativo. Com menos de 2 comparáveis 
 **Parâmetros padrão** (em `scripts/avaliar.py`, sobrescrevíveis em `"parametros"` no JSON):
 | Parâmetro | Valor | Origem |
 |---|---|---|
-| Fator oferta | 0,85 | Literatura 0,90; observado 0,81 na venda da R. Padre Feijó (anunciado 530 mil → vendido 429 mil) |
+| Fator oferta | 0,90 | Literatura 0,90. Com 0,85 as 4 vendas de calibração ficaram todas 8–10% abaixo; 0,81 observado numa venda isolada (Padre Feijó) |
 | Valorização anual | 5% | CUB R1-N subiu ~7,6% abr/25→abr/26; imóveis em geral menos |
 | BDI / itens fora do CUB | 1,20 | Fundações, projetos, BDI, taxas |
 | Fator comercialização | 0,90 | **Provisório**: evolutivo superestimou nas 2 vendas de calibração |
